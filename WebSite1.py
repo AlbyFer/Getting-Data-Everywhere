@@ -2,7 +2,7 @@
 
 doc = '/Users/StarShipIV/Documents/Progetti/Source/Foo.rtf'
 
-def Racing_Post_results(path, save = True): # Adjust name of file with result
+def Foo_results(path, save = True): # Adjust name of file with result
     import urllib
     from bs4 import BeautifulSoup
     import pandas as pd
@@ -46,7 +46,7 @@ def Racing_Post_results(path, save = True): # Adjust name of file with result
 
                 td_soup = tr.find_all('td')
                 for h in range(len(td_soup)):
-                    if str(td_soup[h]) == '<td>\\xa0</td>':
+                    if str(td_soup[h]) == '<td>\\xa0</td>
                         td_soup[h] = None
 
                 td_soup = filter(None, td_soup)
@@ -158,5 +158,5 @@ def Racing_Post_results(path, save = True): # Adjust name of file with result
     return(final)
 
 
-test = Racing_Post_results(doc)
+test = Foo_results(doc)
 
